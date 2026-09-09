@@ -17,7 +17,10 @@ DEFAULT_ROOT = Path(__file__).resolve().parents[1]
 TEXT_SUFFIXES = {"", ".json", ".md", ".py", ".sh", ".txt", ".yaml", ".yml"}
 IGNORED_PARTS = {".git", ".tmp", "__pycache__"}
 REQUIRED_FILES = {
+    ".github/ISSUE_TEMPLATE/praxistest.yml",
+    ".github/PULL_REQUEST_TEMPLATE.md",
     ".github/workflows/verify.yml",
+    "CONTRIBUTING.md",
     "LICENSE",
     "NOTICE.md",
     "README.md",
@@ -31,6 +34,7 @@ REQUIRED_FILES = {
     "_core/runtime-policy.json",
     "_core/workspace-contract.md",
     "_evidence/PUBLICATION-APPROVAL-2026-09-09.md",
+    "_evidence/CHANGE-2026-09-09-private-practice-test.md",
     "docs/testing/anfaenger-walkthrough.md",
     "docs/testing/ergebnisformular.md",
     "docs/agent-interoperabilitaet.md",
@@ -67,6 +71,7 @@ REQUIRED_DIRS = {
     "template/99-archiv",
 }
 PUBLIC_CLAIM_FILES = {
+    "CONTRIBUTING.md",
     "README.md",
     "START-HIER.md",
     "docs/setup.md",
@@ -245,10 +250,72 @@ def check_policy_and_claims(root: Path) -> int:
         if matches:
             raise RepositoryError(f"Verbotener öffentlicher Claim: {name}: {', '.join(matches)}")
     human_actions = set(policy.get("human_gate_actions", []))
-    required_actions = {"publish", "release", "push", "deploy", "activate-connector"}
+    required_actions = {
+        "publish",
+        "release",
+        "push",
+        "deploy",
+        "activate-connector",
+        "share-private-context-with-agent",
+        "publish-sanitized-issue-or-pull-request",
+    }
     if not required_actions.issubset(human_actions):
         raise RepositoryError("_core/policy.json: Human-Gate-Aktionen fehlen")
     return len(patterns)
+
+
+def check_private_practice_and_contribution(root: Path) -> int:
+    contracts = {
+        "README.md": (
+            "Zwei Phasen",
+            "getrennte private Instanz",
+            "echten, überschaubaren Anwendungsfall",
+            "öffentliche Issues und Pull Requests",
+            "CONTRIBUTING.md",
+        ),
+        "START-HIER.md": (
+            "außerhalb des öffentlichen Clones",
+            "weder in Git noch in öffentliche Issues oder Pull Requests",
+        ),
+        "SECURITY.md": (
+            "echter Praxistest",
+            "Agentenzugriff",
+            "bereinigte Reproduktionen",
+        ),
+        "CONTRIBUTING.md": (
+            "Erst lokal lösen",
+            "synthetischen oder vollständig bereinigten Angaben",
+            "Fork unter deiner eigenen GitHub-Identität",
+            "keine private Praxisevidenz imitieren",
+        ),
+        "docs/testing/anfaenger-walkthrough.md": (
+            "Phase 1",
+            "Phase 2",
+            "praktischen Nutzen",
+            "Unterstützung benötigt",
+        ),
+        ".github/ISSUE_TEMPLATE/praxistest.yml": (
+            "Keine Kundeninformationen",
+            "keine Secrets",
+            "SECURITY.md",
+        ),
+        ".github/PULL_REQUEST_TEMPLATE.md": (
+            "Base-SHA",
+            "bash scripts/verify-repo.sh",
+            "Private Instanzdateien wurden nicht",
+            "Kein Auto-Merge",
+        ),
+    }
+    for name, fragments in contracts.items():
+        text = (root / name).read_text(encoding="utf-8")
+        missing = [fragment for fragment in fragments if fragment.lower() not in text.lower()]
+        if missing:
+            raise RepositoryError(f"{name}: Zwei-Phasen- oder Contribution-Vertrag fehlt: {missing[0]}")
+    contribution = (root / "CONTRIBUTING.md").read_text(encoding="utf-8").lower()
+    forbidden = ("git push origin", "auto-merge aktivieren", "maintainer-token anfordern")
+    if any(item in contribution for item in forbidden):
+        raise RepositoryError("CONTRIBUTING.md: unsicherer öffentlicher Beitragsweg")
+    return len(contracts)
 
 
 def check_license(root: Path) -> int:
@@ -317,6 +384,7 @@ def run(root: Path, private_denylist: Path | None = None) -> dict[str, int]:
         "text_files": check_hygiene(resolved, private_terms),
         "json_files": check_json(resolved),
         "claim_rules": check_policy_and_claims(resolved),
+        "practice_contracts": check_private_practice_and_contribution(resolved),
         "license_entries": check_license(resolved),
     }
     check_ci(resolved)

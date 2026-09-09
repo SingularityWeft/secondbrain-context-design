@@ -45,6 +45,8 @@ python3 scripts/build_agent_context.py \
 
 Direkte Identitätsmerkmale sind in `S1` gesperrt. Bei `S2` verlangt ihre Aufnahme zusätzlich `--allow-direct-identifiers`. Ein für manuelle externe Übergabe bestimmtes Bundle verlangt `--handoff-mode manual-external` und `--acknowledge-external-handoff`. Diese Flags führen selbst keine Übertragung aus.
 
+Für einen echten Praxistest wird nur ein überschaubarer Anwendungsfall freigegeben. Claude, Codex, Grok oder ein anderer Agent darf entweder die einzeln bestätigten Pfade in der privaten Instanz oder ein dafür erzeugtes Kontext-Bundle sehen. Ein späteres öffentliches Issue oder ein Pull Request enthält ausschließlich die verallgemeinerte Ursache und eine synthetische beziehungsweise vollständig bereinigte Reproduktion nach [`CONTRIBUTING.md`](../CONTRIBUTING.md).
+
 ## Vertrauensgrenze
 
 Quellinhalte werden im Bundle als untrusted data gekennzeichnet und dürfen die kanonischen Regeln nicht überschreiben. Tests und öffentliche Fixtures bleiben vollständig synthetisch. Private Dateien werden auf owner-only Rechte geprüft; Mustererkennung kann dennoch nicht beweisen, dass Inhalte korrekt klassifiziert sind.

@@ -58,22 +58,27 @@ def validate_contract_documents(root: Path) -> None:
         "01-testeinladung.md": [
             "unbezahlt", "höchstens 60 Minuten", "Konkreter Dank", "unabhängig",
             "ablehnen", "jederzeit abbrechen", "awaiting-real-decision",
+            "synthetischen Beispiel", "getrennten privaten lokalen Instanz", "praktischem Nutzen",
+            "Wenn das nicht weiterhilft", "bereinigtes Issue oder Pull Request",
         ],
         "02-technischer-testauftrag.md": [
             "keine Werbeaussage", "nicht ungefragt", "mit Hilfe", "kein Push",
-            "keine Eingabe realer",
+            "Phase 1", "Phase 2", "Reale ausgewählte Arbeitsinformationen",
+            "öffentliche Rückmeldung",
         ],
         "03-pilotvereinbarung.md": [
             "Getrennte Phasen", "unabhängig davon", "keine Pflicht zu Lob",
-            "nicht automatisch", "auf Wunsch lokal archiviert",
+            "nicht automatisch", "auf Wunsch lokal archiviert", "Partnerschaft", "Beauftragung",
         ],
         "04-einwilligung-und-datenschutz.md": [
             "unsigned-and-blocked", "einzeln getroffen", "Wörtliche Nutzung",
-            "Öffentliche Namens", "Widerruf", "Leere Felder",
+            "Öffentliche Namens", "Widerruf", "Leere Felder", "privater Praxistest",
+            "Agenten beziehungsweise Anbieters", "Öffentliche Rückgabe",
         ],
         "05-laufprotokoll.md": [
             "Repository-SHA", "Startzeit", "Endzeit", "Hilfe nötig", "Artefakte",
-            "Blocker", "Frictions", "Fragen", "keine Evidenz",
+            "Blocker", "Frictions", "Fragen", "keine Evidenz", "praktischer Nutzen",
+            "Unterstützungsbedarf", "keine privaten Inhalte",
         ],
         "07-retest-protokoll.md": [
             "release-blocker", "neuem vollständigem SHA", "unbeteiligte Testperson",

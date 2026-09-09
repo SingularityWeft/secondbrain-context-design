@@ -1,11 +1,11 @@
 # Pilotpaket
 
-Dieses Paket bereitet einen fair begrenzten, synthetischen Primärlauf vor. Es dokumentiert keine erfolgte Zustimmung, keinen realen Test und keine Freigabe.
+Dieses Paket bereitet einen fair begrenzten zweistufigen Primärlauf vor: zuerst einen synthetischen Technikcheck, danach optional einen echten überschaubaren Anwendungsfall in einer getrennten privaten Instanz. Es dokumentiert keine erfolgte Zustimmung, keinen realen Test und keine Freigabe.
 
 Die Dokumente werden in dieser Reihenfolge verwendet:
 
 1. [Testeinladung](01-testeinladung.md) – freiwillige Entscheidung vor jedem Auftrag.
-2. [Technischer Testauftrag](02-technischer-testauftrag.md) – neutraler Einstieg ohne vorweggenommene Hilfe.
+2. [Technischer Testauftrag](02-technischer-testauftrag.md) – neutraler Zwei-Phasen-Einstieg ohne vorweggenommene Hilfe.
 3. [Pilotvereinbarung](03-pilotvereinbarung.md) – Umfang, Dank und Supportgrenze getrennt vom Testergebnis.
 4. [Einwilligung und Datenschutz](04-einwilligung-und-datenschutz.md) – einzelne, widerrufbare Entscheidungen.
 5. [Laufprotokoll](05-laufprotokoll.md) – Weg, Zeit, Hilfe, Artefakte und Beobachtungen.

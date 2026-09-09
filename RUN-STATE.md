@@ -21,4 +21,4 @@
 - Bekannte Grenzen: Dateirechte isolieren keine Prozesse desselben OS-Users; Datenklassifizierung und Regex-Scans sind keine semantische Garantie; Backup, Verschlüsselung, Sync sowie Aufbewahrung und Training durch externe Modelle bleiben User- und Anbieterentscheidungen.
 - Erteilte Human Gates: Veröffentlichung dieses begrenzten Alpha-Stands als öffentliches GitHub-Freebie und initialer Push an `SingularityWeft/secondbrain-context-design`.
 - Weiterhin offene Gates: unabhängige Anfänger-Walkthroughs, technisch isolierter Claude-Desktop-Test sowie rechtliche oder stärkere Claim-/Datenschutzaussagen. Jeder spätere Push, Deploy oder externe Daten-Handoff benötigt eine neue konkrete Freigabe.
-- Nächster Schritt: Kontakte zum synthetischen Walkthrough einladen, reale Befunde dokumentieren und den Alpha-Stand evidenzbasiert weiterentwickeln.
+- Nächster Schritt: Kontakte zum zweistufigen Test einladen – zuerst synthetischer Technikcheck, danach getrennte private Instanz für einen echten, überschaubaren Anwendungsfall. Nur bereinigte Befunde gelangen in Issues, Pull Requests oder öffentliche Evidenz.

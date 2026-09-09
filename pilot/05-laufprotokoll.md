@@ -9,7 +9,8 @@ Status: `not-run`
 - Startzeit:
 - Endzeit:
 - lokale Umgebung, nur soweit technisch erforderlich:
-- Zustimmung zum synthetischen Primärlauf referenziert:
+- Zustimmung zum synthetischen Technikcheck referenziert:
+- separate Zustimmung zum privaten Praxistest referenziert:
 
 ## Weg und Hilfe
 
@@ -20,10 +21,19 @@ Status: `not-run`
 | Setup-Apply |  |  |  |  |  |
 | Status und Capture-Skill |  |  |  |  |  |
 | Setup-Zweitlauf |  |  |  |  |  |
+| privaten Anwendungsfall begrenzen |  |  |  |  |  |
+| private Instanz planen und anwenden |  |  |  |  |  |
+| praktischen Nutzen bewerten |  |  |  |  |  |
+| Feedback bereinigen |  |  |  |  |  |
 
 ## Artefakte und Befunde
 
 - entstandene Artefakte mit relativem Pfad und Hash:
+- echter Anwendungsfall, ausschließlich abstrakt beschrieben:
+- Datenklasse und bestätigte Agenten-/Anbietergrenze:
+- beobachteter praktischer Nutzen:
+- Stellen mit Unterstützungsbedarf:
+- Prüfung, dass keine privaten Inhalte in öffentliche Evidenz übernommen wurden:
 - Blocker:
 - Frictions:
 - Fragen:

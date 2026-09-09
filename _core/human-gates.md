@@ -9,6 +9,8 @@ Diese Matrix ist die fachliche Quelle für Autoritätsgrenzen. [`policy.json`](p
 | private lokale Instanz mit `S1` oder `S2` erzeugen | ja | nur mit explizitem Setup-Acknowledgement | extern gespeicherte owner-only Antwortdatei, bestätigtes Ziel und Datenklasse |
 | begrenztes privates Kontext-Bundle lokal erzeugen | ja | nur mit explizitem Kontext-Acknowledgement | Zweck, Agentenlabel, Datenklasse, relative Quellen und Hashes |
 | privates Kontext-Bundle an einen externen Agenten übergeben | Vorbereitung ja | nein | konkrete Anbieter-/Agentengrenze und separates Handoff-Acknowledgement |
+| echten begrenzten Anwendungsfall in privater Instanz bearbeiten | Vorbereitung ja | nein | benannter Zweck, Datenklasse, erlaubte Pfade und bewusste Agenten-/Anbieterentscheidung |
+| bereinigtes Issue oder Pull Request veröffentlichen | Entwurf und lokale Prüfung ja | nein | öffentlicher Diff/Text ohne private Inhalte plus separate Veröffentlichungsfreigabe |
 | öffentliches Repository, Freebie oder Release veröffentlichen | ja | nein | Owner-Review von Inhalt, Claim, Lizenz und Zielstand |
 | Nachricht, Kommentar, DM oder andere externe Kommunikation senden | ja | nein | freigegebener finaler Wortlaut und Ziel |
 | reale Person kontaktieren oder Daten außerhalb der privaten lokalen Instanz verarbeiten | nein automatisch | nein | Einwilligung, konkrete Anbietergrenze und dokumentierte Datenfreigabe |

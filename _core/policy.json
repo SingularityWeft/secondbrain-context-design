@@ -19,6 +19,8 @@
     "push",
     "deploy",
     "send-external",
+    "share-private-context-with-agent",
+    "publish-sanitized-issue-or-pull-request",
     "customer-contact",
     "reputation-claim",
     "financial-or-legal-commitment",

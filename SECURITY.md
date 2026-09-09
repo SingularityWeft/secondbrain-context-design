@@ -9,12 +9,14 @@ Release-spezifische Namen oder andere private Suchbegriffe gehören nicht in den
 ## Sichere Betriebsgrenze
 
 - Im Repository nur synthetische Daten verwenden; private Antwortdateien und Instanzen immer außerhalb halten.
+- Ein echter Praxistest ist in einer getrennten privaten `S1`-/`S2`-Instanz vorgesehen. Vor Agentenzugriff muss der User den konkreten Anbieter, Zweck, Umfang und die freigegebenen Dateien bewusst bestätigen; lokale Speicherung allein macht einen Cloud-Agenten nicht lokal.
+- Öffentliche Issues und Pull Requests enthalten ausschließlich bereinigte Reproduktionen. Keine echten Unternehmens-, Kunden- oder Personendaten, internen Dokumente, Secrets, vollständigen Logs oder persönlichen Dateipfade veröffentlichen.
 - Keine externe Runtime, Datenbank, Synchronisation oder Connectoren voraussetzen.
 - Keine Secrets in Dateien, Prompts, Commits oder Testausgaben speichern.
 - Eine Prompt-Anweisung gilt nicht als technische Isolation.
 - Private Setup- und Kontextaktionen benötigen eigene Acknowledgements; unklare Daten und unbekannte Aktionen werden fail-closed gestoppt.
 - Dateirechte `0700`/`0600` ersetzen weder Festplattenverschlüsselung noch Backup, Prozessisolation oder Anbieterprüfung.
-- Claude Desktop bleibt `isolation-unverified / synthetic-only`, bis ein echter technischer Isolationstest dokumentiert ist.
+- Claude Desktop bleibt als Vertraulichkeitspfad technisch nicht empfohlen (`isolation-unverified`), bis ein echter technischer Isolationstest dokumentiert ist. Ein User kann ihn für bewusst ausgewählte private Informationen wählen, übernimmt damit aber eine eigene Anbieter- und Datenentscheidung.
 - Der primäre technische CLI-Pfad ist nur unter dem dokumentierten macOS-Sandboxprofil und ausschließlich mit synthetischen Daten unterstützt. Systemdateien bleiben für den Prozess lesbar; Benutzerdaten und Netzwerk werden technisch gesperrt.
 
 ## Befunde melden

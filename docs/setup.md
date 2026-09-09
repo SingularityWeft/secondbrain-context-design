@@ -8,6 +8,8 @@
 - Eine private Antwortdatei liegt außerhalb dieses Repos, gehört nur dem User und hat Dateirechte `0600`.
 - Backup, Verschlüsselung und Synchronisation werden nicht automatisch eingerichtet; `S3 restricted` und Secrets bleiben gesperrt.
 
+Der empfohlene Praxistest hat zwei Phasen: Zuerst wird der folgende synthetische Beispielweg vollständig abgeschlossen. Erst danach entscheidet der User separat über einen einzigen echten Anwendungsfall, die private Datenklasse und den Agenten beziehungsweise Anbieter, der ausgewählte Informationen sehen darf.
+
 ## 1. Geplante Pfade prüfen
 
 ```bash
@@ -35,6 +37,8 @@ Lege zunächst außerhalb des Repos eine eigene Antwortdatei an. Nutze dieselben
 ```
 
 `internal` ist für echte interne Betriebsinformationen ohne Personendaten. Für personenbezogene oder vertrauliche Inhalte ist `confidential` nötig. Zugangsdaten sowie Gesundheits-, Finanz-, Rechts- oder Beschäftigtendaten gehören zu `S3 restricted` und werden nicht unterstützt.
+
+Beginne nicht mit einem vollständigen Import. Wähle einen kleinen echten Arbeitsfall, zum Beispiel die Planung eines internen Projekts oder die Strukturierung eines eigenen Angebots, und gib nur die dafür notwendigen Informationen frei. Wenn Claude, Codex, Grok oder ein anderer Agent hilft, prüfe vorher dessen Aufbewahrung, Training, Löschung, Zugriffs- und Anbietergrenze. Der Agent darf reale Inhalte ausschließlich in der privaten Instanz bearbeiten.
 
 ```bash
 chmod 600 "$HOME/.config/clief/private-answers.json"
@@ -66,6 +70,8 @@ Alternativ `STATUS.md` in der Instanz öffnen. Bei Konflikten nichts löschen od
 ## 5. Agent-Kontext begrenzen
 
 Nach dem Setup zuerst `AGENT-INTERFACE.md` und `01-ausrichtung/user-context.md` prüfen. Für einen Agenten ohne direkten lokalen Dateizugriff den [providerneutralen Bundle-Builder](agent-interoperabilitaet.md) verwenden. Private Bundles verlangen Zweck, Agentenlabel und ein eigenes Acknowledgement. Das Bundle bleibt lokal, bis der User es bewusst innerhalb einer geprüften Daten- und Anbietergrenze weitergibt.
+
+Probleme zuerst lokal mit dem gewählten Agenten diagnostizieren. Nur die verallgemeinerbare Ursache und einen bereinigten Fix nach [CONTRIBUTING.md](../CONTRIBUTING.md) zurückgeben; private Instanzdateien, echte Inhalte und persönliche Pfade bleiben lokal.
 
 ## 6. Optionaler privater Release-Scan
 

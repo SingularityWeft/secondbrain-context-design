@@ -4,7 +4,7 @@
   "generated_from_real_human_evidence": true,
   "gates": [
     {"id": "technical-verify", "status": "passed", "evidence": ["_evidence/SPEC-05.md"]},
-    {"id": "primary-run", "status": "blocked", "evidence": [], "reason": "Keine reale signierte Entscheidung und kein Primärlauf."},
+    {"id": "primary-run", "status": "blocked", "evidence": [], "reason": "Keine reale signierte Entscheidung und kein zweistufiger Primärlauf mit privatem Praxistest."},
     {"id": "independent-beginner-walkthroughs", "status": "blocked", "evidence": [], "reason": "Keine unabhängigen realen Läufe."},
     {"id": "claude-desktop-isolation", "status": "blocked", "evidence": [], "reason": "Kein technischer Isolationstest dieses Runtime-Pfads."},
     {"id": "privacy-and-public-claims", "status": "blocked", "evidence": [], "reason": "Einwilligungen und Owner-Review fehlen."},

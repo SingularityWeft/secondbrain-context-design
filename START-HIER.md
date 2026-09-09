@@ -6,7 +6,7 @@ Dieser Starter soll jedem interessierten User einer Solo-Beratung einen eigenen,
 
 ## Erwartetes Ergebnis
 
-Nach dem technischen Alpha-Aufbau existiert ein lokal prüfbarer Workspace mit synthetischem Beispiel, klaren Datenklassen, begrenzten Skills, einem Beratungsworkflow und einem reproduzierbaren Verify-Einstieg. Dieser erste Slice liefert zunächst nur den Produkt-, Lizenz- und Sicherheitsvertrag.
+Nach dem technischen Alpha-Aufbau existiert ein lokal prüfbarer Workspace mit synthetischem Beispiel, klaren Datenklassen, begrenzten Skills, einem Beratungsworkflow und einem reproduzierbaren Verify-Einstieg. Nach dem erfolgreichen Technikcheck kann außerhalb des Clones eine getrennte private Instanz für einen echten, begrenzten Anwendungsfall folgen.
 
 ## Datenverbote im öffentlichen Starter
 
@@ -30,4 +30,4 @@ bash scripts/verify-spec-00.sh
 
 Erwartet wird `SPEC-00 VERIFY PASS`. Der Befehl liest nur Repository-Dateien und temporär erzeugte synthetische Testdaten. Er führt keine Netzwerk- oder externen Schreibaktionen aus.
 
-Danach die [Human-Gate-Matrix](_core/human-gates.md) lesen. Die Veröffentlichung dieses Alpha-Starters erlaubt keine automatischen Kundenkontakte oder Agentenübertragungen; private Setups, externe Handoffs und jeder spätere Release benötigen weiterhin eigene bewusste Bestätigungen.
+Danach die [Human-Gate-Matrix](_core/human-gates.md) und den [Setup-Leitfaden](docs/setup.md) lesen. Für den privaten Praxistest zuerst den Agenten beziehungsweise Anbieter, einen kleinen Anwendungsfall, die Datenklasse und die erlaubten Informationen bewusst auswählen. Die private Instanz muss außerhalb des öffentlichen Clones liegen. Ihre Inhalte dürfen weder in Git noch in öffentliche Issues oder Pull Requests gelangen.

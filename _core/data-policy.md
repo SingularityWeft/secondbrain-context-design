@@ -20,6 +20,7 @@ Diese Datei ist die fachliche Quelle für Datenklassen. Die maschinenlesbare Spi
 5. Fehlende oder widersprüchliche Kennzeichnung stoppt die Verarbeitung; unklare Herkunft wird mindestens als `S2 confidential` behandelt.
 6. Der öffentliche Starter enthält keine private Instanz und liest keine SecondBrain-, Home- oder Nachbarverzeichnisse.
 7. Unbeschränkter Agentenzugriff auf eine private Instanz ist gesperrt. Kontext-Bundle-Erzeugung ist eine lokale Schreibaktion; eine spätere Übergabe an einen Agenten ist ein eigenes Human Gate und wird vom Builder nicht ausgeführt.
+8. Reale Praxisarbeit findet ausschließlich in der getrennten privaten Instanz statt. Öffentliche Issues, Pull Requests, Logs und Reproduktionen werden auf `S0 synthetic` oder vollständig bereinigte technische Metadaten reduziert.
 
 ## Freigabegrenze
 

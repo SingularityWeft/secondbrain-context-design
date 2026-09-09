@@ -1,0 +1,54 @@
+name: Praxistest oder Installationsproblem
+description: Bereinigte Rückmeldung zu Installation, Verständlichkeit oder allgemein nutzbarer Verbesserung
+title: "[Feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für die Rückmeldung. Bitte ausschließlich synthetische oder vollständig bereinigte Angaben eintragen. Keine Kundeninformationen, persönlichen Pfade, Secrets, internen Dokumente oder vollständigen privaten Logs veröffentlichen.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Art des Befunds
+      options:
+        - Installation oder Setup
+        - Verständlichkeit
+        - Praktischer Nutzen
+        - Allgemeine Verbesserung
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Bereinigte Beschreibung
+      description: Beschreibe nur das allgemein relevante Verhalten ohne echte Inhalte.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimale Reproduktion
+      description: Verwende synthetische Werte und einen kurzen bereinigten Logauszug.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Relevante Umgebung
+      description: Betriebssystemfamilie, Architektur und relevante Toolversionen ohne Benutzername oder persönliche Pfade.
+  - type: textarea
+    id: support
+    attributes:
+      label: Bereits versuchte Unterstützung
+      description: Welche lokale Lösung wurde versucht und hat Claude, Codex, Grok oder ein anderer Agent geholfen?
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Öffentliche Datenhygiene
+      options:
+        - label: Ich habe keine echten Unternehmens-, Kunden- oder Personendaten veröffentlicht.
+          required: true
+        - label: Ich habe keine Secrets, internen Dokumente, persönlichen Dateipfade oder vollständigen privaten Logs veröffentlicht.
+          required: true
+        - label: Ein möglicher Sicherheitsbefund wurde nicht öffentlich beschrieben; dafür nutze ich SECURITY.md.
+          required: true

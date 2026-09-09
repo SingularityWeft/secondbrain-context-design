@@ -8,7 +8,7 @@ Private Pilotphase und öffentlicher Freebie-Release sind zwei getrennte Entsche
 |---|---|---|---|---|
 | technischer Verify auf finalem SHA | erforderlich | erforderlich | technisch grün, finaler SHA folgt | Fresh-Clone-Protokoll |
 | freiwillige Pilotentscheidung | erforderlich | als Herkunftsnachweis | blocked | signierte Entscheidung |
-| Primärlauf | erforderlich | erforderlich | blocked | vollständiges Laufprotokoll |
+| zweistufiger Primärlauf | erforderlich | erforderlich | blocked | synthetischer Technikcheck plus begrenzter privater Praxistest und vollständiges Laufprotokoll |
 | unabhängige Anfänger-Walkthroughs | empfohlen | erforderlich | blocked | vom Owner festgelegte Zahl realer Läufe |
 | Release-Blocker-Retests | falls Befunde | erforderlich | blocked bis Befundlage bekannt | unabhängige Voll-Retests auf neuem SHA |
 | Claude-Desktop-Isolation | für diesen Runtime-Pfad | für diesen Runtime-Claim | blocked | realer technischer Isolationstest |

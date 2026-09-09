@@ -70,9 +70,11 @@ def runtime_version() -> tuple[str, str]:
 
 def repository_sha() -> str:
     result = subprocess.run(
-        ["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True, check=True
+        ["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True, check=False
     )
-    return result.stdout.strip()
+    if result.returncode == 0:
+        return result.stdout.strip()
+    return "source-archive-without-git-metadata"
 
 
 def os_build() -> str:

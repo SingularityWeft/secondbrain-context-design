@@ -24,7 +24,11 @@ python3 scripts/check_skills.py
 python3 scripts/check_pilot.py
 python3 -m unittest discover -s tests -p 'test_*.py'
 python3 scripts/run_e2e.py >/dev/null
-git diff --check
-git diff --cached --check
+if [[ -d .git ]]; then
+  git diff --check
+  git diff --cached --check
+else
+  echo "GIT_DIFF_NOT_APPLICABLE source_archive=true reason=no-git-metadata"
+fi
 
 echo "VERIFY_REPO_PASS"

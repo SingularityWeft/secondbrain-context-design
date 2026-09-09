@@ -97,6 +97,16 @@ def main() -> int:
         canary.write(b"synthetic-canary-content-not-logged")
         canary.flush()
         version, runtime_start = runtime_version()
+        git_metadata_check = (
+            {
+                "target": "git-metadata-write",
+                **permission_denial(
+                    ["bash", str(WRAPPER), "/usr/bin/touch", str(ROOT / ".git" / "sandbox-write-test")]
+                ),
+            }
+            if (ROOT / ".git").is_dir()
+            else {"target": "git-metadata-write", "result": "pass", "state": "not-applicable-no-git-metadata"}
+        )
         checks = {
             "runtime_start": {"target": "codex-version-under-clean-home", "result": runtime_start},
             "workspace_read": {
@@ -107,12 +117,7 @@ def main() -> int:
                 "target": "ignored-runtime-temp",
                 **command_result(["bash", str(WRAPPER), "/usr/bin/touch", str(tmp_parent / "sandbox-write-test")], True),
             },
-            "git_metadata_write": {
-                "target": "git-metadata-write",
-                **permission_denial(
-                    ["bash", str(WRAPPER), "/usr/bin/touch", str(ROOT / ".git" / "sandbox-write-test")]
-                ),
-            },
+            "git_metadata_write": git_metadata_check,
             "external_canary": denied_read("external-canary", Path(canary.name)),
             "real_home": denied_list("real-home", real_home),
             "developer_root": denied_list("developer-root-outside-workspace", real_home / "Developer"),

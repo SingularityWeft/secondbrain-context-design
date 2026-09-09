@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import argparse
+import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -55,12 +57,25 @@ def scan_object(root: Path, object_id: str, private_terms: tuple[str, ...]) -> N
         raise HistoryError(f"Eintrag aus privater Denylist in Git-Objekt {object_id[:12]} erkannt")
 
 
+def check_branch_context(root: Path) -> None:
+    branches = git(root, "for-each-ref", "--format=%(refname:short)", "refs/heads").decode("utf-8").splitlines()
+    if branches == ["main"]:
+        return
+    expected_sha = os.environ.get("GITHUB_SHA", "")
+    is_verified_github_checkout = (
+        branches == []
+        and os.environ.get("GITHUB_ACTIONS") == "true"
+        and re.fullmatch(r"[0-9a-f]{40}", expected_sha) is not None
+        and git(root, "rev-parse", "HEAD").decode("ascii").strip() == expected_sha
+    )
+    if not is_verified_github_checkout:
+        raise HistoryError("Public Repo muss lokal main oder ein verifizierter GitHub-Actions-Checkout sein")
+
+
 def check(root: Path, require_single_root_commit: bool, private_denylist: Path | None = None) -> tuple[int, int]:
     if not (root / ".git").is_dir():
         raise HistoryError("Public Repo besitzt kein lokales .git-Verzeichnis")
-    branches = git(root, "for-each-ref", "--format=%(refname:short)", "refs/heads").decode("utf-8").splitlines()
-    if branches != ["main"]:
-        raise HistoryError("Public Repo muss genau den lokalen Branch main besitzen")
+    check_branch_context(root)
     commit_count = int(git(root, "rev-list", "--count", "--all").decode("ascii").strip())
     if commit_count < 1:
         raise HistoryError("Public Repo besitzt noch keinen Commit")

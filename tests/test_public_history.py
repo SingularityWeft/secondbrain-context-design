@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import subprocess
 import sys
 import tempfile
@@ -11,8 +12,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CHECKER = ROOT / "scripts/check_public_history.py"
 
 
-def command(root: Path, *arguments: str) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(arguments, cwd=root, capture_output=True, text=True, check=False)
+def command(root: Path, *arguments: str, env: dict[str, str] | None = None) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(arguments, cwd=root, capture_output=True, text=True, check=False, env=env)
 
 
 def create_repo(parent: Path, content: str = "Öffentlicher synthetischer Starter.\n") -> Path:
@@ -27,8 +28,8 @@ def create_repo(parent: Path, content: str = "Öffentlicher synthetischer Starte
     return repo
 
 
-def check(repo: Path, *extra: str) -> subprocess.CompletedProcess[str]:
-    return command(repo, sys.executable, str(CHECKER), "--root", str(repo), *extra)
+def check(repo: Path, *extra: str, env: dict[str, str] | None = None) -> subprocess.CompletedProcess[str]:
+    return command(repo, sys.executable, str(CHECKER), "--root", str(repo), *extra, env=env)
 
 
 def private_denylist(parent: Path, value: str, mode: int = 0o600) -> Path:
@@ -85,6 +86,18 @@ class PublicHistoryTests(unittest.TestCase):
             reset_gate = check(repo, "--require-single-root")
             self.assertNotEqual(reset_gate.returncode, 0)
             self.assertIn("genau einen Root-Commit", reset_gate.stderr)
+
+    def test_detached_checkout_requires_matching_github_actions_evidence(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            repo = create_repo(Path(directory))
+            sha = command(repo, "git", "rev-parse", "HEAD").stdout.strip()
+            command(repo, "git", "checkout", "--detach", sha).check_returncode()
+            command(repo, "git", "branch", "-D", "main").check_returncode()
+            self.assertNotEqual(check(repo).returncode, 0)
+            trusted = dict(os.environ, GITHUB_ACTIONS="true", GITHUB_SHA=sha)
+            self.assertEqual(check(repo, env=trusted).returncode, 0)
+            mismatched = dict(os.environ, GITHUB_ACTIONS="true", GITHUB_SHA="0" * 40)
+            self.assertNotEqual(check(repo, env=mismatched).returncode, 0)
 
 
 if __name__ == "__main__":

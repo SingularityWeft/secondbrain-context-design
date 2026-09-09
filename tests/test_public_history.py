@@ -99,6 +99,14 @@ class PublicHistoryTests(unittest.TestCase):
             mismatched = dict(os.environ, GITHUB_ACTIONS="true", GITHUB_SHA="0" * 40)
             self.assertNotEqual(check(repo, env=mismatched).returncode, 0)
 
+    def test_source_archive_requires_explicit_mode(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.assertNotEqual(check(root).returncode, 0)
+            result = check(root, "--allow-source-archive")
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("PUBLIC_HISTORY_NOT_APPLICABLE", result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

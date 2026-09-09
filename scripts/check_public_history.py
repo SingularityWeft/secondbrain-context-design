@@ -97,9 +97,14 @@ def main() -> int:
     parser.add_argument("--root", type=Path, default=ROOT)
     parser.add_argument("--require-single-root", action="store_true")
     parser.add_argument("--private-denylist", type=Path)
+    parser.add_argument("--allow-source-archive", action="store_true")
     args = parser.parse_args()
+    resolved_root = args.root.resolve()
+    if args.allow_source_archive and not (resolved_root / ".git").exists():
+        print("PUBLIC_HISTORY_NOT_APPLICABLE source_archive=true reason=no-git-metadata")
+        return 0
     try:
-        commits, objects = check(args.root.resolve(), args.require_single_root, args.private_denylist)
+        commits, objects = check(resolved_root, args.require_single_root, args.private_denylist)
     except (HistoryError, OSError, UnicodeError, ValueError) as exc:
         print(f"PUBLIC_HISTORY_STOP: {exc}", file=sys.stderr)
         return 2

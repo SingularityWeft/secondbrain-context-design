@@ -40,7 +40,7 @@ Der gesamte lokale Vertrag läuft über genau einen Einstieg:
 bash scripts/verify-repo.sh
 ```
 
-Der Verify ist offline und umfasst Repository-Scans, alle fokussierten Tests sowie den [synthetischen E2E-Fall](examples/synthetische-beratung/README.md). Der [unabhängige Anfänger-Walkthrough](docs/testing/anfaenger-walkthrough.md) ist ein separates Human Gate und wird nicht durch technische Tests ersetzt.
+Der Verify ist offline und umfasst Repository-Scans, alle fokussierten Tests sowie den [synthetischen E2E-Fall](examples/synthetische-beratung/README.md). In einem Git-Clone prüft er zusätzlich die vollständige Objekthistorie. Bei einem GitHub-ZIP wird dieser nicht vorhandene Historienteil sichtbar als `NOT_APPLICABLE` markiert; alle Inhaltsprüfungen laufen trotzdem. Der [unabhängige Anfänger-Walkthrough](docs/testing/anfaenger-walkthrough.md) ist ein separates Human Gate und wird nicht durch technische Tests ersetzt.
 
 Das [Pilotpaket](pilot/README.md) trennt freiwillige Einladung, neutralen Testauftrag, Pilotvereinbarung, Einwilligung, Befunde, Retests und öffentliche GO/NO-GO-Entscheidung. Es ist technisch vorbereitet, dokumentiert aber bewusst noch keinen realen Lauf.
 

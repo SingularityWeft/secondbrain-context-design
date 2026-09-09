@@ -6,10 +6,18 @@ cd "$repo_root"
 
 if [[ -n "${CLIEF_PRIVATE_DENYLIST:-}" ]]; then
   python3 scripts/check_repository.py --private-denylist "$CLIEF_PRIVATE_DENYLIST"
-  python3 scripts/check_public_history.py --private-denylist "$CLIEF_PRIVATE_DENYLIST"
+  if [[ -d .git ]]; then
+    python3 scripts/check_public_history.py --private-denylist "$CLIEF_PRIVATE_DENYLIST"
+  else
+    python3 scripts/check_public_history.py --private-denylist "$CLIEF_PRIVATE_DENYLIST" --allow-source-archive
+  fi
 else
   python3 scripts/check_repository.py
-  python3 scripts/check_public_history.py
+  if [[ -d .git ]]; then
+    python3 scripts/check_public_history.py
+  else
+    python3 scripts/check_public_history.py --allow-source-archive
+  fi
 fi
 
 python3 scripts/check_skills.py

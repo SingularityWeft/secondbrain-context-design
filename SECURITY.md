@@ -19,7 +19,7 @@ Release-spezifische Namen oder andere private Suchbegriffe gehören nicht in den
 
 ## Befunde melden
 
-Bis zu einer öffentlichen Freigabe Sicherheitsbefunde lokal dokumentieren und der Repository-Ownerin über einen bereits vereinbarten privaten Kanal vorlegen. Keine echten Secrets in einen Befund kopieren. Bei möglicher Offenlegung die betroffene Ausführung stoppen, Artefakte unverändert sichern und keine Veröffentlichung vornehmen.
+Sicherheitsbefunde ohne sensible Inhalte können als GitHub Issue gemeldet werden. Potenzielle Schwachstellen, personenbezogene Daten und Secrets niemals in ein öffentliches Issue kopieren, sondern über einen mit dem Repository-Owner vereinbarten privaten Kanal melden. Bei möglicher Offenlegung die betroffene Ausführung stoppen, Artefakte unverändert sichern und keine weitere Verteilung vornehmen.
 
 ## Keine Garantie
 

@@ -1,6 +1,6 @@
-# Clief-Ansatz Starter
+# SecondBrain Context Design Starter
 
-Ein lokaler, deutschsprachiger und providerneutraler Starter für einen KI-fähigen Unternehmens-Workspace von Solo-Beratungen. Der Arbeitsname ist noch nicht als öffentlicher Produktname freigegeben. Er richtet sich allgemein an jeden interessierten User und enthält keine kundenspezifische Pilotidentität.
+Ein öffentlicher Alpha-Starter für einen lokalen, deutschsprachigen und providerneutralen Unternehmens-Workspace von Solo-Beratungen. Er hilft Menschen und ihren dateifähigen KI-Agents, Unternehmenswissen, persönlichen Arbeitskontext und wiederholbare Abläufe nachvollziehbar zu verwenden, ohne die Knowledge Base an einen einzelnen Modellanbieter zu binden.
 
 Der Starter organisiert Kontext, Arbeitsabläufe, prüfbare Übergaben und menschliche Entscheidungen in lesbaren Dateien. Das öffentliche Repo enthält ausschließlich synthetische Beispieldaten. Eine ausdrücklich bestätigte private Instanz kann reale interne oder vertrauliche Daten lokal außerhalb des Repos halten: keine Datenbank, kein SaaS, keine externen Connectoren und keine automatische Veröffentlichung oder Übertragung.
 
@@ -20,8 +20,7 @@ Lies zuerst [START-HIER.md](START-HIER.md). Dort stehen Zweck, erwartetes Ergebn
 - keine rechtliche Zertifizierung oder Rechtsberatung;
 - keine Garantie für Verschlüsselung, Backup, Prozessisolation oder die Datenpraxis eines verwendeten Agenten;
 - keine selbstständig durch KI ausgeübte Leitung eines Unternehmens;
-- keine nachgewiesene Geschäfts- oder Qualitätswirkung;
-- keine öffentliche Release-Freigabe.
+- keine nachgewiesene Geschäfts- oder Qualitätswirkung über den dokumentierten technischen Alpha-Stand hinaus.
 
 Die kanonischen Regeln stehen in der [Datenrichtlinie](_core/data-policy.md) und der [Human-Gate-Matrix](_core/human-gates.md). Herkunft und Lizenzhinweise stehen in [NOTICE.md](NOTICE.md), Sicherheitsgrenzen in [SECURITY.md](SECURITY.md).
 

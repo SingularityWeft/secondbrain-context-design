@@ -30,6 +30,7 @@ REQUIRED_FILES = {
     "_core/policy.json",
     "_core/runtime-policy.json",
     "_core/workspace-contract.md",
+    "_evidence/PUBLICATION-APPROVAL-2026-09-09.md",
     "docs/testing/anfaenger-walkthrough.md",
     "docs/testing/ergebnisformular.md",
     "docs/agent-interoperabilitaet.md",
@@ -221,8 +222,8 @@ def check_policy_and_claims(root: Path) -> int:
     if not isinstance(policy, dict):
         raise RepositoryError("_core/policy.json: Objekt erwartet")
     project = policy.get("project_name", {})
-    if project.get("status") != "working-name" or project.get("public_release") != "blocked":
-        raise RepositoryError("_core/policy.json: Arbeitsname oder Release-Gate ist nicht fail-closed")
+    if project.get("status") != "public-alpha" or project.get("public_release") != "approved-alpha":
+        raise RepositoryError("_core/policy.json: öffentlicher Alpha-Status ist nicht korrekt freigegeben")
     if policy.get("starter_mode") != "synthetic-only":
         raise RepositoryError("_core/policy.json: starter_mode muss synthetic-only sein")
     classes = {item.get("id"): item.get("starter_allowed") for item in policy.get("data_classes", [])}

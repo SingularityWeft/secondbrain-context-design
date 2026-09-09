@@ -1,6 +1,6 @@
 # Akzeptanzvertrag: sauberes Public Freebie mit privater Instanz
 
-Status: `technical-pass; publication-gates-blocked`
+Status: `technical-pass; public-alpha-approved`
 
 ## Ziel
 
@@ -20,7 +20,7 @@ Der veröffentlichungsfähige Starter besitzt eine neue, entpersonalisierte Git-
 
 ## Veröffentlichungsgrenze
 
-Technische Release-Bereitschaft ist keine Veröffentlichung. Push, Hosting, Freebie-Distribution und reputationsrelevante Claims bleiben bis zur ausdrücklichen Owner-Freigabe blockiert.
+Die scopegebundene Owner-Freigabe für das öffentliche Alpha-Freebie und seinen initialen GitHub-Push ist separat dokumentiert. Sie ist keine Freigabe für Deployments, automatische Distribution, externe Datenübertragung oder stärkere reputationsrelevante Claims.
 
 ## Erbrachte technische Evidenz
 

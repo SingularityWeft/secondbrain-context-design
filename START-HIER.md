@@ -30,4 +30,4 @@ bash scripts/verify-spec-00.sh
 
 Erwartet wird `SPEC-00 VERIFY PASS`. Der Befehl liest nur Repository-Dateien und temporär erzeugte synthetische Testdaten. Er führt keine Netzwerk- oder externen Schreibaktionen aus.
 
-Danach die [Human-Gate-Matrix](_core/human-gates.md) lesen. Der technische Alpha-Status ist keine Freigabe für Kundenkontakte, Agentenübertragung oder Veröffentlichung; der private Setup-Modus benötigt eigene bewusste Bestätigungen.
+Danach die [Human-Gate-Matrix](_core/human-gates.md) lesen. Die Veröffentlichung dieses Alpha-Starters erlaubt keine automatischen Kundenkontakte oder Agentenübertragungen; private Setups, externe Handoffs und jeder spätere Release benötigen weiterhin eigene bewusste Bestätigungen.

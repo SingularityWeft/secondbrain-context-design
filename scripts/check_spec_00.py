@@ -26,6 +26,7 @@ REQUIRED_PATHS = (
     "_core/policy.json",
     "_core/license-inventory.json",
     "_evidence/SPEC-00.md",
+    "_evidence/PUBLICATION-APPROVAL-2026-09-09.md",
 )
 PUBLIC_CLAIM_PATHS = ("README.md", "START-HIER.md")
 TEXT_SUFFIXES = {"", ".md", ".json", ".py", ".sh", ".txt", ".yml", ".yaml"}
@@ -110,8 +111,8 @@ def check_repository_hygiene() -> int:
 def check_policy_contract() -> dict:
     policy = load_json(POLICY_PATH)
     project = policy.get("project_name", {})
-    if project.get("status") != "working-name" or project.get("public_release") != "blocked":
-        raise CheckError("Arbeitsname oder Release-Gate ist nicht fail-closed")
+    if project.get("status") != "public-alpha" or project.get("public_release") != "approved-alpha":
+        raise CheckError("Öffentlicher Alpha-Status ist nicht korrekt freigegeben")
     if policy.get("starter_mode") != "synthetic-only":
         raise CheckError("Starter-Modus muss synthetic-only sein")
     classes = {item.get("id"): item.get("starter_allowed") for item in policy.get("data_classes", [])}

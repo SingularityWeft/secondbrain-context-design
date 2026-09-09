@@ -2,7 +2,7 @@
 
 ## Öffentlicher Release-Kandidat
 
-- Stand: `technical-pass; publication-gates-blocked`
+- Stand: `public-alpha-approved`
 - Historie: Das öffentliche Repository wird als neuer Root-Commit auf `main` erzeugt. Frühere Spec-Commits und Git-Objekte gehören ausschließlich in das private, owner-only Archiv.
 - Konsolidierter Umfang: `SPEC-00` bis `SPEC-05` technisch vollständig; `SPEC-06` technisch vollständig, reale Human Gates nicht simuliert.
 - Akzeptanzevidenz:
@@ -19,5 +19,6 @@
 - Technische Prüfungen: Repository-, Skill-, Pilot-, Policy-, Lizenz-, Claim-, Secret-, Pfad-, Platzhalter- und Git-Objekt-Verträge; 73 Unit-/Vertragstests; synthetischer E2E-Lauf; frischer lokaler Clone.
 - Behobener Security-Befund: Keine personenspezifischen Namen oder davon abgeleitete Hash-Fingerprints werden im öffentlichen Starter gespeichert. Release-spezifische Begriffe können nur über eine externe owner-only Denylist geprüft werden.
 - Bekannte Grenzen: Dateirechte isolieren keine Prozesse desselben OS-Users; Datenklassifizierung und Regex-Scans sind keine semantische Garantie; Backup, Verschlüsselung, Sync sowie Aufbewahrung und Training durch externe Modelle bleiben User- und Anbieterentscheidungen.
-- Blockierte Human Gates: unabhängige Anfänger-Walkthroughs, technisch isolierter Claude-Desktop-Test, Claim- und Datenschutzprüfung sowie ausdrückliche Freebie-, Push-, Veröffentlichungs- und Release-Freigabe.
-- Nächster Schritt: Human Review des Release-Kandidaten; erst danach gegebenenfalls Push oder Veröffentlichung.
+- Erteilte Human Gates: Veröffentlichung dieses begrenzten Alpha-Stands als öffentliches GitHub-Freebie und initialer Push an `SingularityWeft/secondbrain-context-design`.
+- Weiterhin offene Gates: unabhängige Anfänger-Walkthroughs, technisch isolierter Claude-Desktop-Test sowie rechtliche oder stärkere Claim-/Datenschutzaussagen. Jeder spätere Push, Deploy oder externe Daten-Handoff benötigt eine neue konkrete Freigabe.
+- Nächster Schritt: Kontakte zum synthetischen Walkthrough einladen, reale Befunde dokumentieren und den Alpha-Stand evidenzbasiert weiterentwickeln.

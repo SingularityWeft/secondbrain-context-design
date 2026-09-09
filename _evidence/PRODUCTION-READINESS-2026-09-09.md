@@ -3,7 +3,8 @@
 ## Entscheidung
 
 - Technischer Release-Kandidat: `GO`
-- Öffentliche Veröffentlichung: `NO-GO`, bis die unten genannten Human Gates echte Evidenz besitzen
+- Öffentliche Alpha-Veröffentlichung: `GO` durch scopegebundene Owner-Freigabe
+- Validierte Produktreife oder stärkere Wirkungs-/Datenschutzclaims: `NO-GO`, bis die unten genannten Human Gates echte Evidenz besitzen
 
 ## Bewertete Domänen
 
@@ -17,13 +18,13 @@
 | User Experience | Human Gate offen | Technische Setup- und Fehlerpfade sind dokumentiert; unabhängige Anfänger-Walkthroughs wurden nicht simuliert |
 | Delivery und Supply Chain | technisch bereit | Standardbibliothek-only, gepinnter Checkout, MIT plus ICM-Herkunft, neue geschlossene Git-Historie und Fresh-Clone-Verify |
 | KI-spezifisches Verhalten | begrenzt bereit | Providerneutrale Schnittstelle, explizite Includes, Quellen als untrusted data und Human Gates; Downstream-Modellverhalten und Claude-Desktop-Isolation bleiben ungeprüft |
-| Launch Operations | Human Gate offen | Support-, Claim-, Datenschutz-, Distributions-, Push- und Release-Entscheidungen benötigen ausdrückliche menschliche Freigabe |
+| Launch Operations | Alpha-Push freigegeben | Initiales öffentliches GitHub-Freebie ist freigegeben; spätere Pushes, Deployments, automatische Distribution und stärkere Claims benötigen neue Freigabe |
 
-## Blockierte Veröffentlichungsgates
+## Offene Reife- und Claim-Gates
 
 - unabhängige Anfänger-Walkthroughs und erforderliche Retests;
 - technisch isolierter Claude-Desktop-Test;
 - redaktionelle und rechtliche Prüfung von Name, Claims und Datenschutzgrenzen;
-- ausdrückliche Freebie-, Push-, Veröffentlichungs- und Release-Freigabe.
+- rechtliche oder stärkere Datenschutz-, Qualitäts- und Wirkungsclaims sowie jeder spätere Außen-Write.
 
 Diese Gates werden nicht durch Unit-Tests, synthetische Fixtures oder technische Dokumentation ersetzt.

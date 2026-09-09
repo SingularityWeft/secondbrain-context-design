@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
   "decision": "NO-GO",
-  "generated_from_real_human_evidence": false,
+  "generated_from_real_human_evidence": true,
   "gates": [
     {"id": "technical-verify", "status": "passed", "evidence": ["_evidence/SPEC-05.md"]},
     {"id": "primary-run", "status": "blocked", "evidence": [], "reason": "Keine reale signierte Entscheidung und kein Primärlauf."},
     {"id": "independent-beginner-walkthroughs", "status": "blocked", "evidence": [], "reason": "Keine unabhängigen realen Läufe."},
     {"id": "claude-desktop-isolation", "status": "blocked", "evidence": [], "reason": "Kein technischer Isolationstest dieses Runtime-Pfads."},
     {"id": "privacy-and-public-claims", "status": "blocked", "evidence": [], "reason": "Einwilligungen und Owner-Review fehlen."},
-    {"id": "strategic-priority", "status": "blocked", "evidence": [], "reason": "Owner-Entscheidung fehlt."},
-    {"id": "public-freebie-push-release", "status": "blocked", "evidence": [], "reason": "Keine ausdrückliche öffentliche Freigabe."}
+    {"id": "strategic-priority", "status": "passed", "evidence": ["_evidence/PUBLICATION-APPROVAL-2026-09-09.md"]},
+    {"id": "public-freebie-push-release", "status": "passed", "evidence": ["_evidence/PUBLICATION-APPROVAL-2026-09-09.md"]}
   ]
 }

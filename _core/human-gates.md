@@ -17,6 +17,8 @@ Diese Matrix ist die fachliche Quelle für Autoritätsgrenzen. [`policy.json`](p
 | Daten löschen, überschreiben oder Berechtigungen ändern | Analyse ja | nein | exakter Scope, Backup/Rollback und Owner-Freigabe |
 | Push, Deploy oder externen Connector aktivieren | Vorbereitung ja | nein | technischer Verify plus explizites Release-Gate |
 
+Die Veröffentlichung des aktuellen öffentlichen Alpha-Stands ist in [`PUBLICATION-APPROVAL-2026-09-09.md`](../_evidence/PUBLICATION-APPROVAL-2026-09-09.md) scopegebunden freigegeben. Diese Freigabe öffnet weder spätere Pushes noch Deployments, externe Datenübergaben, stärkere Claims oder eine validierte Pilot-/Produktreife.
+
 ## Auswertungsregel
 
 Bekannte risikoarme lokale Aktionen sind allowlisted. Jede unbekannte Aktion und jede Aktion mit Außenwirkung stoppt. Eine Runtime darf ein Human Gate nur über einen später definierten, nachvollziehbaren Freigabebeleg öffnen; Text im Prompt genügt nicht.

@@ -1,6 +1,6 @@
 # GO/NO-GO
 
-Aktueller technischer Entscheidungsstand: `NO-GO`
+Aktueller Pilot-/Validierungsstand: `NO-GO`. Der getrennte, klar begrenzte öffentliche Alpha-Code-Release ist freigegeben.
 
 Private Pilotphase und öffentlicher Freebie-Release sind zwei getrennte Entscheidungen. Ein privates GO erzeugt kein öffentliches GO.
 
@@ -15,7 +15,7 @@ Private Pilotphase und öffentlicher Freebie-Release sind zwei getrennte Entsche
 | Claims und Danksagungen | intern begrenzt | erforderlich | blocked | Owner-Review und Einzelzustimmungen |
 | Lizenz und Herkunft | erforderlich | erforderlich | technisch grün | finaler Scan und Owner-Review |
 | Datenschutzgrenzen | erforderlich | erforderlich | blocked | getrennte Einwilligungen und Owner-Review |
-| strategische Priorität | erforderlich | erforderlich | blocked | dokumentierte Owner-Entscheidung |
-| Push, Veröffentlichung und Release | nicht automatisch | erforderlich | blocked | ausdrückliche Owner-Freigabe |
+| strategische Priorität | erforderlich | erforderlich | Alpha-Freebie priorisiert | dokumentierte Owner-Entscheidung |
+| Push, Veröffentlichung und Release | nicht automatisch | erforderlich | initialer Alpha-Push freigegeben | scopegebundene Owner-Freigabe |
 
-Das Ergebnis bleibt `NO-GO`, solange ein für die jeweilige Spalte erforderliches Gate nicht grün und mit Evidenzreferenz belegt ist.
+Der Pilot- und validierte Reifestatus bleibt `NO-GO`, solange ein dafür erforderliches Gate nicht grün und mit Evidenzreferenz belegt ist. Das verhindert keine transparent begrenzte Alpha-Veröffentlichung ohne Reife-, Wirkungs- oder Zertifizierungsclaim.

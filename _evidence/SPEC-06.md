@@ -1,6 +1,6 @@
 # Akzeptanzevidenz SPEC-06
 
-Status: `passed-technical; human-gates-blocked`
+Status: `passed-technical; pilot-gates-partially-blocked; public-alpha-approved`
 
 ## Erforderliche technische Evidenz
 
@@ -19,7 +19,7 @@ Status: `passed-technical; human-gates-blocked`
 - Entscheidung und Primärlauf der eingeladenen Testperson.
 - Unabhängige Anfänger-Walkthroughs und Retests.
 - Technisch isolierter Claude-Desktop-Test.
-- Freigabe des Owners für Claims, Datenschutzgrenzen, öffentliches Freebie, Push und Release.
+- Die Freigabe des Owners für das begrenzte öffentliche Alpha-Freebie und seinen initialen Push ist in [`PUBLICATION-APPROVAL-2026-09-09.md`](PUBLICATION-APPROVAL-2026-09-09.md) belegt. Stärkere Claims und rechtliche Datenschutzbewertungen bleiben offen.
 
 ## Technischer Lauf 2026-09-08
 
@@ -38,4 +38,4 @@ Der Scanner erkennt definierte Identitäts-, Kontakt-, Pfad-, Secret- und Claim-
 
 - `git clone --no-hardlinks …`, Checkout `31a3c40eb11f4fed6b35082471e5cff4dc332cf4`, danach `bash scripts/verify-repo.sh` — PASS mit 53 Tests.
 - `git status --porcelain=v1` im frischen Clone — leer.
-- Technisches Ergebnis: SPEC-06 ist grün; die oben genannten menschlichen und öffentlichen Gates bleiben `blocked`.
+- Technisches Ergebnis: SPEC-06 ist grün; der öffentliche Alpha-Code-Release ist scopegebunden freigegeben. Primärlauf, unabhängige Walkthroughs, Desktop-Isolation und weitergehende Reife-/Claim-Gates bleiben `blocked`.

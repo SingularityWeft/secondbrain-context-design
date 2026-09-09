@@ -46,15 +46,20 @@ class Spec06PilotTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("PILOT_CONTRACT_PASS gates=7 findings=0 fixture_findings=1", result.stdout)
 
-    def test_real_human_and_public_gates_are_explicitly_blocked(self) -> None:
+    def test_public_alpha_approval_is_separate_from_open_pilot_gates(self) -> None:
         payload = json.loads((ROOT / "pilot/gate-status.json").read_text(encoding="utf-8"))
         gates = {gate["id"]: gate for gate in payload["gates"]}
         self.assertEqual(payload["decision"], "NO-GO")
-        self.assertFalse(payload["generated_from_real_human_evidence"])
-        self.assertEqual({gate_id for gate_id in HUMAN_GATES if gates[gate_id]["status"] == "blocked"}, HUMAN_GATES)
-        for gate_id in HUMAN_GATES:
+        self.assertTrue(payload["generated_from_real_human_evidence"])
+        approved = {"strategic-priority", "public-freebie-push-release"}
+        blocked = HUMAN_GATES - approved
+        self.assertEqual({gate_id for gate_id in HUMAN_GATES if gates[gate_id]["status"] == "blocked"}, blocked)
+        for gate_id in blocked:
             self.assertEqual(gates[gate_id]["evidence"], [])
             self.assertTrue(gates[gate_id]["reason"])
+        for gate_id in approved:
+            self.assertEqual(gates[gate_id]["status"], "passed")
+            self.assertTrue(gates[gate_id]["evidence"])
 
     def test_missing_fairness_term_stops_with_invitation_path(self) -> None:
         with tempfile.TemporaryDirectory(prefix="clief-pilot-contract-") as directory:

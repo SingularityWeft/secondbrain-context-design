@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
   "project_name": {
-    "value": "Clief-Ansatz Starter",
-    "status": "working-name",
-    "public_release": "blocked"
+    "value": "SecondBrain Context Design Starter",
+    "status": "public-alpha",
+    "public_release": "approved-alpha"
   },
   "starter_mode": "synthetic-only",
   "allowed_actions": [

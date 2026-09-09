@@ -1,0 +1,24 @@
+{
+  "data_class": "synthetic",
+  "synthetic": true,
+  "id": "2026-w37-demo",
+  "date": "2026-09-08",
+  "period": "2026-W37",
+  "projects": [
+    {
+      "id": "prozessklarheit-demo",
+      "title": "Synthetische Prozessklarheit",
+      "status": "aktiv",
+      "blockers": ["Freigabe des erfundenen Ablaufs offen"],
+      "next_action": "Den synthetischen Ist-Ablauf in fünf Schritten beschreiben."
+    },
+    {
+      "id": "archivprobe-demo",
+      "title": "Synthetische Archivprobe",
+      "status": "pausiert",
+      "blockers": ["Restart-Entscheidung offen"],
+      "next_action": ""
+    }
+  ],
+  "open_decisions": ["Toolwahl für den erfundenen Workshop bleibt offen."]
+}

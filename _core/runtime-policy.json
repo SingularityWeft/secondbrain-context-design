@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "canonical_interface": "provider-neutral-local-file-bundle",
+  "canonical_logic_paths": ["_core", "AGENT-INTERFACE.md", "CONTEXT.md", "STATUS.md"],
+  "runtime_adapters": {"status": "optional-noncanonical", "paths": ["AGENTS.md", "CLAUDE.md"]},
+  "bundle_contract": {
+    "formats": ["utf-8-markdown", "json"],
+    "provider_invocation": false,
+    "external_transfer": false,
+    "source_hashes": "sha256-required",
+    "instance_data_classes": ["S0", "S1", "S2"],
+    "restricted_data_allowed": false,
+    "private_context_acknowledgement": "required"
+  },
+  "primary_path": "macos-sandboxed-codex-cli",
+  "primary_status": "restricted-synthetic-only",
+  "owner_decision": "unsigned-technical-default",
+  "tested_environment": {
+    "os": "macOS 26.6.2",
+    "os_build": "25G83",
+    "codex_cli": "0.150.0-alpha.12.2",
+    "claude_desktop": "1.49585.0",
+    "claude_code": "2.1.263",
+    "sandbox": "sandbox-exec"
+  },
+  "required_controls": [
+    "ephemeral-empty-home",
+    "deny-real-home",
+    "deny-developer-root-except-workspace",
+    "deny-cloud-sync",
+    "deny-secret-paths",
+    "deny-container-sockets",
+    "deny-git-metadata-write",
+    "deny-network",
+    "synthetic-data-only"
+  ],
+  "unsupported_for_confidential_data": [
+    "claude-desktop",
+    "unsandboxed-codex-cli",
+    "unsandboxed-claude-code"
+  ]
+}

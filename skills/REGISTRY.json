@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 MoselMinds GmbH",
+  "external_skills_bundled": false,
+  "skills": [
+    {
+      "id": "capture-und-routing",
+      "version": "1.1.0",
+      "contract": "capture-und-routing/SKILL.md",
+      "trigger": "Eingang erfassen und Ziel vorschlagen",
+      "output_root": "00-eingang"
+    },
+    {
+      "id": "projekt-start",
+      "version": "1.1.0",
+      "contract": "projekt-start/SKILL.md",
+      "trigger": "Projektidee begrenzt starten",
+      "output_root": "02-projekte"
+    },
+    {
+      "id": "entscheidung-dokumentieren",
+      "version": "1.1.0",
+      "contract": "entscheidung-dokumentieren/SKILL.md",
+      "trigger": "offene Entscheidung dokumentieren",
+      "output_root": "04-entscheidungen"
+    },
+    {
+      "id": "wochenreview",
+      "version": "1.1.0",
+      "contract": "wochenreview/SKILL.md",
+      "trigger": "unterbrochenen Arbeitsstand zusammenführen",
+      "output_root": "05-reviews"
+    }
+  ]
+}

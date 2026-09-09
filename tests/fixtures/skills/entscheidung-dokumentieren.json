@@ -1,0 +1,12 @@
+{
+  "data_class": "synthetic",
+  "synthetic": true,
+  "id": "toolwahl-demo",
+  "date": "2026-09-08",
+  "question": "Soll der erfundene Workshop mit einer Tabelle oder einem Whiteboard vorbereitet werden?",
+  "facts": ["Beide Varianten lassen sich lokal und ohne Connector testen."],
+  "assumptions": ["Die erfundene Nutzerin bevorzugt eine lineare Checkliste."],
+  "options": ["Tabelle", "Whiteboard", "Manuelle Papierprobe"],
+  "owner": "Menschliche Demo-Ownerin",
+  "human_gate": "Ownerin wählt nach Sichtung eines synthetischen Beispiels."
+}

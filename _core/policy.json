@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "project_name": {
+    "value": "Clief-Ansatz Starter",
+    "status": "working-name",
+    "public_release": "blocked"
+  },
+  "starter_mode": "synthetic-only",
+  "allowed_actions": [
+    "read-synthetic",
+    "draft-internal-synthetic",
+    "verify-local",
+    "create-private-local-instance-with-explicit-acknowledgement",
+    "build-local-context-bundle-with-explicit-acknowledgement"
+  ],
+  "human_gate_actions": [
+    "publish",
+    "release",
+    "push",
+    "deploy",
+    "send-external",
+    "customer-contact",
+    "reputation-claim",
+    "financial-or-legal-commitment",
+    "delete-or-overwrite",
+    "change-permissions",
+    "activate-connector"
+  ],
+  "data_classes": [
+    {"id": "S0", "name": "synthetic", "starter_allowed": true},
+    {"id": "S1", "name": "internal", "starter_allowed": false, "private_instance_allowed": true},
+    {"id": "S2", "name": "confidential", "starter_allowed": false, "private_instance_allowed": true},
+    {"id": "S3", "name": "restricted", "starter_allowed": false, "private_instance_allowed": false}
+  ],
+  "forbidden_public_claims": [
+    {"id": "privacy-certification", "pattern": "DSGVO[- ]konform"},
+    {"id": "maturity-superlative", "pattern": "State of the Art"},
+    {"id": "autonomous-management", "pattern": "autonome Unternehmensf[üu]hrung"},
+    {"id": "guaranteed-impact", "pattern": "garantiert(?:e|er|en|es)? (?:Umsatz|Erfolg|Wirkung|Zeitersparnis)"}
+  ]
+}

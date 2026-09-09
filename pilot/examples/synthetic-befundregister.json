@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "status": "technical-fixture-not-human",
+  "data_class": "synthetic",
+  "allowed_classes": ["release-blocker", "friction", "question"],
+  "findings": [
+    {
+      "id": "fixture-001",
+      "class": "release-blocker",
+      "summary": "Erfundene Startdatei verweist auf einen nicht vorhandenen relativen Pfad.",
+      "reproduction_steps": [
+        "Frische synthetische Instanz erzeugen.",
+        "Erfundene Startdatei öffnen.",
+        "Relativen Verweis auswählen."
+      ],
+      "evidence": ["synthetic://fixture/broken-link"],
+      "affected_task": "Startanleitung vollständig von vorn ausführen",
+      "found_on_sha": "0000000000000000000000000000000000000000",
+      "status": "open"
+    }
+  ]
+}

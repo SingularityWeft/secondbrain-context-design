@@ -1,0 +1,40 @@
+{
+  "data_class": "synthetic",
+  "synthetic": true,
+  "contains_restricted_data": false,
+  "workspace_id": "nordstern-demo",
+  "business_name": "Nordstern Beratung",
+  "owner_role": "Solo-Beraterin",
+  "who": "Erfundene kleine Handwerksbetriebe mit unklaren internen Abläufen",
+  "why": "Entscheidungen und Übergaben nachvollziehbar machen",
+  "what": "Ein begrenzter Prozessklarheits-Sprint mit dokumentiertem Ergebnis",
+  "how": "Synthetische Bestandsaufnahme, priorisierte Hypothese, Entwurf, Review und Übergabe",
+  "working_style": "Kurze fokussierte Arbeitsblöcke mit einem sichtbaren nächsten Schritt",
+  "communication_preferences": "Direkt, freundlich, konkret und ohne unnötigen Fachjargon",
+  "capacity_constraints": "Höchstens zwei parallele Vorhaben und bewusst eingeplante Pausen",
+  "support_preferences": "Erst Kontext zusammenfassen, dann eine kleine Handlung vorschlagen und Unsicherheit offen benennen",
+  "user_goals": [
+    "Weniger Kontext wiederholen",
+    "Entscheidungen nachvollziehbar halten",
+    "Nach Unterbrechungen leicht wieder einsteigen"
+  ],
+  "audiences": [
+    "Erfundene Betriebsinhaberinnen",
+    "Erfundene interne Projektverantwortliche"
+  ],
+  "offers": [
+    "Prozessklarheits-Sprint",
+    "Entscheidungslandkarte"
+  ],
+  "principles": [
+    "Kleinsten prüfbaren Schritt wählen",
+    "Entwürfe vor Außenwirkung menschlich prüfen",
+    "Unsicherheit sichtbar lassen"
+  ],
+  "boundaries": [
+    "Keine echten Personen- oder Kundendaten",
+    "Keine externen Nachrichten oder Veröffentlichungen",
+    "Keine Wirkungs- oder Rechtsversprechen"
+  ],
+  "setup_date": "2026-09-08"
+}

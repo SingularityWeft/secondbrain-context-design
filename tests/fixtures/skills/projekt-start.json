@@ -1,0 +1,12 @@
+{
+  "data_class": "synthetic",
+  "synthetic": true,
+  "id": "prozessklarheit-demo",
+  "date": "2026-09-08",
+  "why": "Einen erfundenen Übergabeprozess nachvollziehbar machen.",
+  "target_users": ["Erfundene Betriebsinhaberinnen"],
+  "desired_outcome": "Eine geprüfte synthetische Prozesslandkarte.",
+  "non_goals": ["Kein produktiver Rollout", "Keine echten Kontaktdaten"],
+  "boundaries": ["Nur lokale synthetische Dateien", "Keine externe Kommunikation"],
+  "next_action": "Den synthetischen Ist-Ablauf in fünf Schritten beschreiben."
+}

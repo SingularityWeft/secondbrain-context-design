@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "data_class": "synthetic",
+  "synthetic": true,
+  "evidence_type": "technical-fixture-not-human",
+  "not_human_evidence": true,
+  "actor": "Automatisierte technische Fixture",
+  "recorded_at": "2026-09-08T18:30:00Z",
+  "claim_decisions": {
+    "claim-duration-60": {"decision": "accept", "replacement": ""},
+    "claim-duration-90": {"decision": "reject", "replacement": ""},
+    "assumption-adoption": {"decision": "change", "replacement": "Die mögliche Transferhilfe der Checkliste bleibt eine zu prüfende Hypothese."},
+    "claim-guarantee": {"decision": "reject", "replacement": ""}
+  },
+  "final_artifact_decision": "accept"
+}

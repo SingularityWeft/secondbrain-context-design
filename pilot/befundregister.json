@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0",
+  "status": "awaiting-primary-run",
+  "data_class": "synthetic",
+  "allowed_classes": ["release-blocker", "friction", "question"],
+  "findings": []
+}

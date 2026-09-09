@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "scale": "1-5",
+  "dimensions": [
+    {"id": "source-quality", "question": "Sind Quelle, Version, Fundstelle und Stand für jeden Faktenclaim nachvollziehbar?"},
+    {"id": "claim-grounding", "question": "Trägt die Quelle genau die formulierte Aussage und bleibt Unsicherheit sichtbar?"},
+    {"id": "relevance", "question": "Unterstützt jeder Abschnitt die Entscheidung oder den Nutzen aus dem Briefing?"},
+    {"id": "control", "question": "Sind kritische Claims, finale Freigabe und Außenwirkung wirksam menschlich gegated?"}
+  ],
+  "stop_conditions": [
+    "critical-claim-without-decision",
+    "contradiction-hidden",
+    "source-content-conflated-with-conclusion",
+    "external-write-attempt",
+    "non-synthetic-data"
+  ]
+}

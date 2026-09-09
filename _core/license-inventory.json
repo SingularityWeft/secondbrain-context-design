@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "foreign_roots": ["third_party", "vendor", "skills/vendor"],
+  "entries": [
+    {
+      "id": "icm-mwp-conventions",
+      "source_url": "https://github.com/RinDig/Interpretable-Context-Methodology",
+      "source_commit": "02ba5d85c7871b75c7c702a2d8da6524723d53d4",
+      "license": "MIT",
+      "copyright_notice": "Copyright (c) 2026 Model Workspace Protocol Contributors",
+      "usage": "Konzeptionelle Adaption von Routing, Stage Contracts, kanonischen Quellen und Human Checkpoints; eigenständig formuliert.",
+      "bundled_paths": [],
+      "notice_file": "NOTICE.md"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "case_id": "nordstern-workshop-demo",
+  "run_id": "run-001",
+  "workflow_version": "1.0.0",
+  "started_at": "2026-09-08T18:00:00Z",
+  "decision_recorded_at": "2026-09-08T18:30:00Z",
+  "decision_evidence_type": "technical-fixture-not-human",
+  "not_human_evidence": true,
+  "status": "technical-fixture-complete-awaiting-real-human",
+  "sources": [
+    {
+      "id": "source-a",
+      "file": "sources/source-a.md",
+      "version": "1.0",
+      "as_of": "2026-09-01",
+      "sha256": "14c7edbb2d4745d47fccbd0c5573d534930db863edba679de9f7ccf726d75991",
+      "line_count": 8
+    },
+    {
+      "id": "source-b",
+      "file": "sources/source-b.md",
+      "version": "1.0",
+      "as_of": "2026-09-02",
+      "sha256": "f2b6adee56ba4607240e5caccc5d483620f7572bb728a6cce3960d1c26aafdeb",
+      "line_count": 8
+    },
+    {
+      "id": "source-c",
+      "file": "sources/source-c.md",
+      "version": "0.1",
+      "as_of": "2026-09-03",
+      "sha256": "27c55387aedb555a1fc79b8d9291556348d10a50a10fd8717581aa31ebb4f4f8",
+      "line_count": 8
+    }
+  ],
+  "artifacts": {
+    "00-case-snapshot.json": "4847595446851e8780fb163f1e4c1a12820317c14cb2cb02a8d7623e526580fd",
+    "01-briefing.md": "27d5a4efe7cbcb0c3ee2a03ef767853146167720d9ec49ae6bd5c0b080449112",
+    "02-evidence-ledger.md": "31e331b7fd0f774db16adace0249c64314d25baf0d162e478a2af7ab7361d9b7",
+    "03-structure-draft.md": "feace52559cde8d8d8d1378b63771b8dfcc5fb3ff13776e6ede84c565fc81172",
+    "04-human-review.md": "c8984ece2f044f74ffad8ed818404b641b5c6afe29a163cdaf9fcea231917ada",
+    "06-debrief.md": "34cc23bd64facfd85ccab94860baf8665cdd227eb12a2f2a92754f73eaa27eb8",
+    "05-working-state.md": "4547f0a95fa83a09bc357fdfdbea37f4859ecc93801b94ad0381923538c68224"
+  },
+  "decision_record_sha256": "576d1ce5f70ccb7955edadbb9231516d4d999888879db4143f3b676022c8843b",
+  "changes": {
+    "structure_original_sha256": "1ab1c1a7e90f0c59bb606e2f399d49721edf3d794740c78e0eea8be7ecff69b0",
+    "structure_current_sha256": "feace52559cde8d8d8d1378b63771b8dfcc5fb3ff13776e6ede84c565fc81172",
+    "manual_change_detected": true,
+    "changed_claims": [
+      "assumption-adoption"
+    ],
+    "rejected_claims": [
+      "claim-duration-90",
+      "claim-guarantee"
+    ]
+  },
+  "result": "technical-fixture-complete-awaiting-real-human",
+  "open_questions": [
+    "Soll der Workshop 60 oder 90 Minuten dauern?",
+    "Welche Aussage zur Wirkung ist ausreichend belegt?"
+  ],
+  "external_writes": false
+}

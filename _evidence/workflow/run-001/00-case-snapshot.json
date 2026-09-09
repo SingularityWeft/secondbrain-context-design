@@ -1,0 +1,135 @@
+{
+  "case": {
+    "schema_version": "1.0",
+    "workflow_version": "1.0.0",
+    "data_class": "synthetic",
+    "synthetic": true,
+    "case_id": "nordstern-workshop-demo",
+    "run_id": "run-001",
+    "started_at": "2026-09-08T18:00:00Z",
+    "briefing": {
+      "audience": "Erfundene Inhaberinnen kleiner Handwerksbetriebe",
+      "decision_or_benefit": "Eine geeignete Struktur für einen synthetischen Prozessworkshop auswählen",
+      "scope": "Generische interne Workshop-Outline ohne Kundenkommunikation oder Veröffentlichung",
+      "open_questions": [
+        "Soll der Workshop 60 oder 90 Minuten dauern?",
+        "Welche Aussage zur Wirkung ist ausreichend belegt?"
+      ]
+    },
+    "sources": [
+      {
+        "id": "source-a",
+        "file": "sources/source-a.md",
+        "version": "1.0",
+        "as_of": "2026-09-01"
+      },
+      {
+        "id": "source-b",
+        "file": "sources/source-b.md",
+        "version": "1.0",
+        "as_of": "2026-09-02"
+      },
+      {
+        "id": "source-c",
+        "file": "sources/source-c.md",
+        "version": "0.1",
+        "as_of": "2026-09-03"
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-duration-60",
+        "type": "fact",
+        "statement": "Die synthetische Vorabumfrage bevorzugt 60 Minuten.",
+        "source_id": "source-a",
+        "locator": "L6-L6",
+        "as_of": "2026-09-01",
+        "evidence_status": "supported",
+        "critical": false,
+        "contradiction_group": "workshop-duration"
+      },
+      {
+        "id": "claim-duration-90",
+        "type": "fact",
+        "statement": "Die synthetische Retrospektive hält 90 Minuten für notwendig.",
+        "source_id": "source-b",
+        "locator": "L6-L6",
+        "as_of": "2026-09-02",
+        "evidence_status": "supported",
+        "critical": false,
+        "contradiction_group": "workshop-duration"
+      },
+      {
+        "id": "claim-checklist",
+        "type": "fact",
+        "statement": "Die synthetischen Teilnehmenden wünschen eine kurze Checkliste.",
+        "source_id": "source-a",
+        "locator": "L6-L6",
+        "as_of": "2026-09-01",
+        "evidence_status": "supported",
+        "critical": false,
+        "contradiction_group": ""
+      },
+      {
+        "id": "assumption-adoption",
+        "type": "assumption",
+        "statement": "Eine Checkliste könnte die Übernahme in den erfundenen Alltag erleichtern.",
+        "source_id": "",
+        "locator": "",
+        "as_of": "2026-09-08",
+        "evidence_status": "unverified",
+        "critical": true,
+        "contradiction_group": ""
+      },
+      {
+        "id": "claim-guarantee",
+        "type": "fact",
+        "statement": "Der Workshop garantiert eine verantwortungsvolle Entscheidung.",
+        "source_id": "source-c",
+        "locator": "L6-L6",
+        "as_of": "2026-09-03",
+        "evidence_status": "insufficient",
+        "critical": true,
+        "contradiction_group": ""
+      }
+    ],
+    "outline_sections": [
+      "Ziel und Entscheidung",
+      "Synthetischer Ist-Ablauf",
+      "Optionen und Trade-offs",
+      "Transfer-Checkliste"
+    ],
+    "reusable": [
+      "Briefing-Struktur",
+      "Claim-Ledger-Felder",
+      "Reviewfragen"
+    ],
+    "next_decision": "Eine menschliche Ownerin entscheidet über Dauer, Claims und finalen Arbeitsstand."
+  },
+  "sources": [
+    {
+      "id": "source-a",
+      "file": "sources/source-a.md",
+      "version": "1.0",
+      "as_of": "2026-09-01",
+      "sha256": "14c7edbb2d4745d47fccbd0c5573d534930db863edba679de9f7ccf726d75991",
+      "line_count": 8
+    },
+    {
+      "id": "source-b",
+      "file": "sources/source-b.md",
+      "version": "1.0",
+      "as_of": "2026-09-02",
+      "sha256": "f2b6adee56ba4607240e5caccc5d483620f7572bb728a6cce3960d1c26aafdeb",
+      "line_count": 8
+    },
+    {
+      "id": "source-c",
+      "file": "sources/source-c.md",
+      "version": "0.1",
+      "as_of": "2026-09-03",
+      "sha256": "27c55387aedb555a1fc79b8d9291556348d10a50a10fd8717581aa31ebb4f4f8",
+      "line_count": 8
+    }
+  ]
+}

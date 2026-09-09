@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "recorded_at": "2026-09-08T20:25:24+00:00",
+  "status": "pass",
+  "environment": {
+    "os": "26.6.2",
+    "os_build": "25G83",
+    "architecture": "arm64",
+    "codex_cli": "0.150.0-alpha.12.2",
+    "claude_desktop": "1.49585.0",
+    "workspace_sha": "89bd45cd3aaa0f3339c738eb0039d3ed7dea8e22",
+    "runtime_home": "ephemeral-empty"
+  },
+  "checks": {
+    "runtime_start": {"target": "codex-version-under-clean-home", "result": "pass"},
+    "workspace_read": {"target": "repository-readme", "result": "pass", "exit_code": 0},
+    "workspace_write": {"target": "ignored-runtime-temp", "result": "pass", "exit_code": 0},
+    "git_metadata_write": {"target": "git-metadata-write", "result": "pass", "exit_code": 1},
+    "external_canary": {"target": "external-canary", "result": "pass", "exit_code": 1},
+    "real_home": {"target": "real-home", "result": "pass", "exit_code": 1},
+    "developer_root": {"target": "developer-root-outside-workspace", "result": "pass", "exit_code": 1},
+    "cloud_sync": {"target": "cloud-sync", "result": "pass", "exit_code": 1},
+    "secret_path": {"target": "secret-directory", "result": "pass", "exit_code": 1},
+    "shell": {"target": "local-shell-true", "result": "pass", "exit_code": 0},
+    "network": {"target": "loopback-socket-connect", "result": "pass", "exit_code": 1},
+    "container_socket": {"target": "container-socket", "result": "pass", "state": "absent"}
+  },
+  "logged_content": false,
+  "failures": []
+}

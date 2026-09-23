@@ -2,7 +2,7 @@
 
 ## Eigenständiges Projekt
 
-Clief-Ansatz Starter ist ein eigenständiges MoselMinds-Projekt. Der Name ist ein nicht freigegebener Arbeitsname. Das Projekt wird weder von Jake Van Clief noch von den Mitwirkenden am Model Workspace Protocol unterstützt oder zertifiziert.
+SecondBrain Context Design Starter ist ein eigenständiges MoselMinds-Projekt. Das Projekt wird weder von Jake Van Clief noch von den Mitwirkenden am Model Workspace Protocol unterstützt oder zertifiziert.
 
 ## ICM/MWP-Ursprung
 
@@ -41,4 +41,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-Das maschinenlesbare Inventar steht in [`_core/license-inventory.json`](_core/license-inventory.json). Inhalte der Clief-Notes-Community oder private SecondBrain-Notizen wurden nicht übernommen.
+Das maschinenlesbare Inventar steht in [`_core/license-inventory.json`](_core/license-inventory.json).
